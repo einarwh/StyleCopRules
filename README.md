@@ -313,6 +313,65 @@ See http://www.stylecop.com/docs/Layout%20Rules.html
 
 ## Maintainability Rules (SA1400-)
 
+To claim that these rules vastly improves maintainability is probably stretching it, but they don't put any heavy burdens on the developer either. The false positive ratio will probably be very low.
+
+See http://www.stylecop.com/docs/Maintainability%20Rules.html
+
+### Sane
+
+* [SA1119: StatementMustNotUseUnnecessaryParenthesis]()
+
+  Probably just proper code hygiene.
+
+* [SA1400: AccessModifierMustBeDeclared]()
+
+  It's probably a good idea to be explicit, but I don't feel strongly about this.
+
+* [SA1401: FieldsMustBePrivate]
+
+  Under severe doubt. This is an etablished "best practice" in the .NET world, but how many developers can provide coherent rationale for this best practice?
+
+* [SA1402: FileMayOnlyContainASingleClass]()
+
+  This is the norm, a reader would be very surprised otherwise.
+
+* [SA1403: FileMayOnlyContainASingleNamespace]()
+
+  This is the norm, a reader would be very surprised otherwise.
+
+* [SA1404: CodeAnalysisSuppressionMustHaveJustification]()
+
+  It's probably always a good idea to provide a reason for suppressing a rule. (If the reason is "the rule is stupid", obviously the rule should be switched off.)
+  
+  
+* [SA1405: DebugAssertMustProvideMessageText]()
+
+  It's probably always a good idea to provide a message; one can only hope that the developer will bother to write a meaningful one. Luckily I think ReSharper is not yet autogenerating such messages!
+
+* [SA1406: DebugFailMustProvideMessageText]()
+
+  Ref SA1405.
+
+* [SA1407: ArithmeticExpressionsMustDeclarePrecedence]()
+
+  This improves readability.
+
+* [SA1408: ConditionalExpressionsMustDeclarePrecendence]()
+
+  This improves readability.
+
+* [SA1409: RemoveUnnecessaryCode]()
+
+  Can't think of a reason to allow "empty" code like this.
+
+* [SA1410: RemoveDelegateParenthesisWhenPossible]()
+
+  Uncertain. This is not important.
+
+* [SA1411: AttributeConstructorMustNotUseUnnecessaryParenthesis]()
+
+  Uncertain. This is not important.
+
 
 ## Naming Rules (SA1300-)
 
