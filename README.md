@@ -374,6 +374,61 @@ See http://www.stylecop.com/docs/Maintainability%20Rules.html
 
 ## Naming Rules (SA1300-)
 
+It pretty limited what a purely syntactic analysis tell us about the quality of names.
+
+### Sane
+
+* [SA1300: ElementMustBeginWithUpperCaseLetter](http://www.stylecop.com/docs/SA1300.html)
+
+  Fair enough, it's the convention.
+
+* [SA1302: InterfaceNamesMustBeginWithI](http://www.stylecop.com/docs/SA1302.html)
+
+  It's actually a terribly silly rule, but unfortunately it's always been the convention in .NET code that all interfaces should begin with an I. This is the official recommendation from Microsoft. At the same time, we are told that we should avoid Hungarian notation. It makes no sense. Presumably it stems from the misunderstanding that interfaces and classes always go in pairs: one implementing class per interface. Then there's an assumed conflict between the interface and the class as to which one gets the "real" name and which one gets a derivation. According to such a warped view, the choice is between `IFoo` (interface) and `Foo` (class) and `Foo` (interface) and `CFoo` or `FooImpl` (class). A much better solution is to solve this contention by having the class name reflect some concrete aspect of the implementation. An example would be to have a `List` interface with classes `LinkedList` and `ArrayList`. But alas, this battle is lost and there is no point in fighting wind-mills.
+
+* [SA1304: NonPrivateReadonlyFieldsMustBeginWithUpperCaseLetter](http://www.stylecop.com/docs/SA1304.html)
+
+  Uncertain. I suppose the rationale is that non-private fields should have the same syntactic form as properties.
+
+* [SA1307: AccessibleFieldsMustBeginWithUpperCaseLetter](http://www.stylecop.com/docs/SA1307.html)
+
+  Ref SA1304.
+
+
+### Insane
+
+* [SA1301: ElementMustBeginWithLowerCaseLetter](http://www.stylecop.com/docs/SA1301.html)
+
+  The StyleCop documentation states that this rule is currently never triggered.
+
+* [SA1303: ConstFieldNamesMustBeginWithUpperCaseLetter](http://www.stylecop.com/docs/SA1303.html)
+
+  I can't think of any good reasons for distinguishing syntactically between constants and non-constants - it feels like a watered-down form of Hungarian notation.
+
+* [SA1305: FieldNamesMustNotUseHungarianNotation](http://www.stylecop.com/docs/SA1305.html)
+
+  In my experience this rule only ever leads to false positives: StyleCop will wrongly assume that some field name is written using Hungarian notation. Even though it is possible to whitelist words to prevent StyleCop from flagging false positives on a per-case basis, I think it's a waste of time to teach the analysis tool to avoid false positives when you never experience genuine violations of this rule.
+
+* [SA1306: FieldNamesMustBeginWithLowerCaseLetter](http://www.stylecop.com/docs/SA1306.html)
+
+  I prefer the convention that field names begin with an underscore (ref SA1309). This makes it easy to distinguish between fields (which constitute object state) and variables (which are transient).
+
+* [SA1308: VariableNamesMustNotBePrefixed](http://www.stylecop.com/docs/SA1308.html)
+
+  This is a silly rule preventing a convention I've never seen used in practice. There is no reason to apply rules that have no practical effect. (Of course, if you ever come across developers using this convention, enable this rule at once.)
+
+* [SA1309: FieldNamesMustNotBeginWithUnderscore](http://www.stylecop.com/docs/SA1309.html)
+
+  I feel the exact opposite way: field names should begin with underscore.
+
+* [SA1310: FieldNamesMustNotContainUnderscore](http://www.stylecop.com/docs/SA1310.html)
+
+  I suppose a violation of SA1309 is also a violation of SA1310? Otherwise this rule would be fine.
+
+* [SA1311: StaticReadonlyFieldsMustBeginWithUpperCaseLetter](http://www.stylecop.com/docs/SA1311.html)
+
+  I can't think of any good reasons for distinguishing syntactically between static readonly fields and other fields. It feels like a watered-down form of Hungarian notation.
+
 
 ## Ordering Rules (SA1200-)
 
