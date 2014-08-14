@@ -53,6 +53,38 @@ StyleCop settings intended to help rather than harm your project.
 * [SA1622: GenericTypeParameterDocumentationMustHaveText](http://www.stylecop.com/docs/SA1622.html)
 
   Ref SA1620.
+  
+* [SA1625: ElementDocumentationMustNotBeCopiedAndPasted](http://www.stylecop.com/docs/SA1625.html)
+
+  Under serious doubt. Silly to check for, yet hard to envision meaningful duplicate comments. I suppose duplicate comments (due to copy-and-paste) will only happen if the project runs a static analysis tool that requires all code elements to be documented.
+
+* [SA1626: SingleLineCommentsMustNotUseDocumentationStyleSlashes](http://www.stylecop.com/docs/SA1626.html)
+
+  This is OK, no need to use triple-slash for regular code comments.
+  
+* [SA1627: DocumentationTextMustNotBeEmpty](http://www.stylecop.com/docs/SA1627.html)
+
+  It makes no sense for the documentation text to be empty - in that case the entire documentation of the element should be deleted.
+
+* [SA1644: DocumentationHeadersMustNotContainBlankLines](http://www.stylecop.com/docs/SA1644.html)
+
+  Ambivalent. A bit silly, but fair enough.
+
+* [SA1645: IncludedDocumentationFileDoesNotExist](http://www.stylecop.com/docs/SA1645.html)
+
+  In case _include_ is used the file should clearly exist.
+
+* [SA1646: IncludedDocumentationXPathDoesNotExist](http://www.stylecop.com/docs/SA1646.html)
+
+  Similar to SA1645.
+
+* [SA1647: IncludeNodeDoesNotContainValidFileAndPath](http://www.stylecop.com/docs/SA1647.html)
+
+  Similar to SA1645.
+  
+* [SA1648: InheritDocMustBeUsedWithInheritingClass](http://www.stylecop.com/docs/SA1648.html)
+
+  I've never seen this tag used, but I suppose it's fine.
 
 
 ### Insane
