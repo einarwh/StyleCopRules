@@ -266,6 +266,10 @@ See http://www.stylecop.com/docs/Layout%20Rules.html
 * [SA1511: WhileDoFooterMustNotBePrecededByBlankLine](http://www.stylecop.com/docs/SA1511.html)
 
   This is just proper code hygiene (although I've never seen this violated).
+  
+* [SA1513: ClosingCurlyBracketMustBeFollowedByBlankLine](http://www.stylecop.com/docs/SA1513.html)
+
+  This is just proper code hygiene.
 
 * [SA1514: ElementDocumentationHeaderMustBePrecededByBlankLine](http://www.stylecop.com/docs/SA1514.html)
 
