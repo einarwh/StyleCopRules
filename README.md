@@ -441,6 +441,42 @@ In general, I don't think it makes sense to spend the developers' time sorting c
 
 ### Sane
 
+* [SA1203: ConstantsMustAppearBeforeFields](http://www.stylecop.com/docs/SA1203.html)
+
+  Barely.
+
+* [SA1206: DeclarationKeywordsMustFollowOrder](http://www.stylecop.com/docs/SA1206.html)
+
+  Barely.
+
+* [SA1207: ProtectedMustComeBeforeInternal](http://www.stylecop.com/docs/SA1207.html)
+
+  This rule is so specific I suppose it practically never applies, but fine. It does no harm.
+
+* [SA1208: SystemUsingDirectivesMustBePlacedBeforeOtherUsingDirectives](http://www.stylecop.com/docs/SA1208.html)
+
+  Under serious doubt.
+
+* [SA1209: UsingAliasDirectivesMustBePlacedAfterOtherUsingDirectives](http://www.stylecop.com/docs/SA1209.html)
+
+  This makes things more readable.
+
+* [SA1212: PropertyAccessorsMustFollowOrder](http://www.stylecop.com/docs/SA1212.html)
+
+  I've never seen this rule violated, but fine.
+
+* [SA1213: EventAccessorsMustFollowOrder](http://www.stylecop.com/docs/SA1213.html)
+
+  This is fine too.
+
+* [SA1214: StaticReadonlyElementsMustAppearBeforeStaticNonReadonlyElements](http://www.stylecop.com/docs/SA1214.html)
+
+  Not sure it's terribly useful, but perhaps clean to distinguish between readonly and mutable.
+
+* [SA1215: InstanceReadonlyElementsMustAppearBeforeInstanceNonReadonlyElements](http://www.stylecop.com/docs/SA1215.html)
+
+  Not sure it's terribly useful, but perhaps clean to distinguish between readonly and mutable.
+
 
 ### Insane
 
