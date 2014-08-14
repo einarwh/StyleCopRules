@@ -653,10 +653,6 @@ See http://www.stylecop.com/docs/Spacing%20Rules.html
 
   OK. Violations of this rule is just sloppy typing.
 
-* [SA1005: SingleLineCommentsMustBeginWithSingleSpace](http://www.stylecop.com/docs/SA1005.html)
-
-  Even more of a pedant rule, but the practice of adding the one spacing can probably be interned by muscle memory, and I suppose it makes things a little tidier.
-
 * [SA1006: PreprocessorKeywordsMustNotBePrecededBySpace](http://www.stylecop.com/docs/SA1006.html)
 
   This is the convention. I rarely see preprocessor keywords in the wild, so the rule rarely applies.
