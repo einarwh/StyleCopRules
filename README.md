@@ -3,6 +3,11 @@ SaneCop
 
 StyleCop settings intended to help rather than harm your project.
 
+# Introduction
+
+Used correctly, StyleCop is a useful tool for enforcing healthy code hygiene in your C# project. Used incorrectly, it can cause considerable harm by prompting developers to resort to bad practices like autogenerating documentation or wasting the developers' time by forcing them to manually keep their code elements sorted. StyleCop is best when it is largely invisible, gets out of the developers' way, yet keeps them from writing sloppy code by accident. When in doubt, it is better to leave a rule out, since a false positive is worse than a false negative.
+
+
 # Assessment of rules
 
 
