@@ -381,6 +381,8 @@ See http://www.stylecop.com/docs/Maintainability%20Rules.html
 
 It pretty limited what a purely syntactic analysis tell us about the quality of names.
 
+See http://www.stylecop.com/docs/Naming%20Rules.html
+
 ### Sane
 
 * [SA1300: ElementMustBeginWithUpperCaseLetter](http://www.stylecop.com/docs/SA1300.html)
@@ -438,6 +440,8 @@ It pretty limited what a purely syntactic analysis tell us about the quality of 
 ## Ordering Rules (SA1200-)
 
 In general, I don't think it makes sense to spend the developers' time sorting code elements according to arbitrary criteria like access modifiers or the alphabet. It creates unnecessary work without improving code navigation. 
+
+See http://www.stylecop.com/docs/Ordering%20Rules.html
 
 ### Sane
 
@@ -512,6 +516,8 @@ In general, I don't think it makes sense to spend the developers' time sorting c
 ## Readability Rules (SA1100-)
 
 As always, StyleCop is mainly helpful when assisting in maintaining elementary code hygiene and consistency of formatting. As corrective-aggressive monkey (ref SA1122), StyleCop is annoying and outright damaging.
+
+See http://www.stylecop.com/docs/Readability%20Rules.html
 
 ### Sane
 
@@ -626,6 +632,8 @@ As always, StyleCop is mainly helpful when assisting in maintaining elementary c
 ## Spacing Rules (SA1000-)
 
 This is primarily about simple code hygiene. This is what StyleCop does best.
+
+See http://www.stylecop.com/docs/Spacing%20Rules.html
 
 ### Sane
 
