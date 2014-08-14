@@ -124,7 +124,7 @@ See http://www.stylecop.com/docs/Documentation%20Rules.html
   
   `<param name="profileName">The profile name</param>`
   
-  How does this aid the developer in any way?
+  How does this aid code comprehension in any way?
 
 * [SA1612: ElementParameterDocumentationMustMatchElementParameters](http://www.stylecop.com/docs/SA1612.html)
 
@@ -137,7 +137,7 @@ See http://www.stylecop.com/docs/Documentation%20Rules.html
   
   `<returns>The <see cref="Foo">.</returns>`
   
-  How does this aid the developer in any way?
+  How does this aid code comprehension in any way?
   
 * [SA1618: GenericTypeParametersMustBeDocumented](http://www.stylecop.com/docs/SA1618.html)
 
