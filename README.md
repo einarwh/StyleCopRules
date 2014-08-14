@@ -290,23 +290,23 @@ See http://www.stylecop.com/docs/Layout%20Rules.html
 
 ### Insane
 
-* [SA1501: StatementMustNotBeOnSingleLine]
+* [SA1501: StatementMustNotBeOnSingleLine](http://www.stylecop.com/docs/SA1501.html)
 
   IMHO the code is sometimes more readable on a single line. YMMV.
 
-* [SA1502: ElementMustNotBeOnSingleLine]
+* [SA1502: ElementMustNotBeOnSingleLine](http://www.stylecop.com/docs/SA1502.html)
 
   Sometimes being concise helps readability.
 
-* [SA1504: AllAccessorMustBeMultiLineOrSingleLine]()
+* [SA1504: AllAccessorMustBeMultiLineOrSingleLine](http://www.stylecop.com/docs/SA1504.html)
 
   Only makes sense if you only ever have trivial property implementation (in which case - heresy! - you might as well have used fields instead, even though .NET lore indicates that this is very bad, m'kay?). It may well be that one accessor (e.g. `get`) is very simple whereas the other one is more complex.
 
-* [SA1512: SingleLineCommentsMustNotBeFollowedByBlankLine]()
+* [SA1512: SingleLineCommentsMustNotBeFollowedByBlankLine](http://www.stylecop.com/docs/SA1512.html)
 
   I don't quite see the problem and would rather be a bit too permissive than needlessly strict - I wouldn't want to break the build over this.
 
-* [SA1515: SingleLineCommentMustBePrecededByBlankLine]()
+* [SA1515: SingleLineCommentMustBePrecededByBlankLine](http://www.stylecop.com/docs/SA1515.html)
 
   Ref SA1512.
 
@@ -319,56 +319,55 @@ See http://www.stylecop.com/docs/Maintainability%20Rules.html
 
 ### Sane
 
-* [SA1119: StatementMustNotUseUnnecessaryParenthesis]()
+* [SA1119: StatementMustNotUseUnnecessaryParenthesis](http://www.stylecop.com/docs/SA1119.html)
 
   Probably just proper code hygiene.
 
-* [SA1400: AccessModifierMustBeDeclared]()
+* [SA1400: AccessModifierMustBeDeclared](http://www.stylecop.com/docs/SA1400.html)
 
   It's probably a good idea to be explicit, but I don't feel strongly about this.
 
-* [SA1401: FieldsMustBePrivate]
+* [SA1401: FieldsMustBePrivate](http://www.stylecop.com/docs/SA1401.html)
 
   Under severe doubt. This is an etablished "best practice" in the .NET world, but how many developers can provide coherent rationale for this best practice?
 
-* [SA1402: FileMayOnlyContainASingleClass]()
+* [SA1402: FileMayOnlyContainASingleClass](http://www.stylecop.com/docs/SA1402.html)
 
   This is the norm, a reader would be very surprised otherwise.
 
-* [SA1403: FileMayOnlyContainASingleNamespace]()
+* [SA1403: FileMayOnlyContainASingleNamespace](http://www.stylecop.com/docs/SA1403.html)
 
   This is the norm, a reader would be very surprised otherwise.
 
-* [SA1404: CodeAnalysisSuppressionMustHaveJustification]()
+* [SA1404: CodeAnalysisSuppressionMustHaveJustification](http://www.stylecop.com/docs/SA1404.html)
 
   It's probably always a good idea to provide a reason for suppressing a rule. (If the reason is "the rule is stupid", obviously the rule should be switched off.)
   
-  
-* [SA1405: DebugAssertMustProvideMessageText]()
+* [SA1405: DebugAssertMustProvideMessageText](http://www.stylecop.com/docs/SA1405.html)
 
   It's probably always a good idea to provide a message; one can only hope that the developer will bother to write a meaningful one. Luckily I think ReSharper is not yet autogenerating such messages!
 
-* [SA1406: DebugFailMustProvideMessageText]()
+* [SA1406: DebugFailMustProvideMessageText](http://www.stylecop.com/docs/SA1406.html)
 
   Ref SA1405.
 
-* [SA1407: ArithmeticExpressionsMustDeclarePrecedence]()
+* [SA1407: ArithmeticExpressionsMustDeclarePrecedence](http://www.stylecop.com/docs/SA1407.html)
 
   This improves readability.
 
-* [SA1408: ConditionalExpressionsMustDeclarePrecendence]()
+* [SA1408: ConditionalExpressionsMustDeclarePrecendence](http://www.stylecop.com/docs/SA1408.html)
 
   This improves readability.
 
-* [SA1409: RemoveUnnecessaryCode]()
+* [SA1409: RemoveUnnecessaryCode](http://www.stylecop.com/docs/SA1409.html)
 
   Can't think of a reason to allow "empty" code like this.
 
-* [SA1410: RemoveDelegateParenthesisWhenPossible]()
+* [SA1410: RemoveDelegateParenthesisWhenPossible](http://www.stylecop.com/docs/SA1410.html)
 
   Uncertain. This is not important.
 
-* [SA1411: AttributeConstructorMustNotUseUnnecessaryParenthesis]()
+* [SA1411: AttributeConstructorMustNotUseUnnecessaryParenthesis](http://www.stylecop.com/docs/SA1411.html)
 
   Uncertain. This is not important.
 
