@@ -5,7 +5,7 @@ StyleCop settings intended to help rather than harm your project.
 
 # Introduction
 
-Used correctly, StyleCop is a useful tool for enforcing healthy code hygiene in your C# project. Used incorrectly, it can cause considerable harm by prompting developers to resort to bad practices like autogenerating documentation or wasting the developers' time by forcing them to manually keep their code elements sorted. StyleCop is best when it is largely invisible, gets out of the developers' way, yet keeps them from writing sloppy code by accident. When in doubt, it is better to leave a rule out, since a false positive is worse than a false negative.
+Used correctly, StyleCop is a useful tool for enforcing healthy code hygiene in your C# project. Used incorrectly, it can cause considerable harm by prompting developers to resort to bad practices like autogenerating documentation or wasting the developers' time by forcing them to manually keep their code elements sorted. StyleCop is best when it is largely invisible, gets out of the developers' way, yet keeps them from writing sloppy code by accident. In general, a candidate rule needs to provide benefits that significantly offset the cost for developers in order to be included in the analysis. When in doubt, it is better to leave a rule out.
 
 
 # Assessment of rules
@@ -436,6 +436,41 @@ It pretty limited what a purely syntactic analysis tell us about the quality of 
 
 
 ## Ordering Rules (SA1200-)
+
+In general, I don't think it makes sense to spend the developers' time sorting code elements according to arbitrary criteria like access modifiers or the alphabet. It creates unnecessary work without improving code navigation. 
+
+### Sane
+
+
+### Insane
+
+* [SA1200: UsingDirectivesMustBePlacedWithinNamespace](http://www.stylecop.com/docs/SA1200.html)
+
+  No!
+
+* [SA1201: ElementsMustAppearInTheCorrectOrder](http://www.stylecop.com/docs/SA1201.html)
+
+  No. I am not spending my time memorizing the exact sequence of code elements required to please StyleCop. 
+
+* [SA1202: ElementsMustBeOrderedByAccess](http://www.stylecop.com/docs/SA1202.html)
+
+  No. This is actually harmful, it is much better to group code elements cohesively with respect to functionality (i.e. place private helper functions next to the public functions they help).
+
+* [SA1204: StaticElementsMustAppearBeforeInstanceElements](http://www.stylecop.com/docs/SA1204.html)
+
+  No, I see no advantages gained by this rule that would offset the disadvantages: if I change from static to instance or the other way around I should have to manually move the code around? Insane.
+
+* [SA1205: PartialElementsMustDeclareAccess](http://www.stylecop.com/docs/SA1205.html)
+
+  Ha ha! The rationale is that "StyleCop may not be able to determine the correct placement of the elements in the file". In other words, this insane rule is a prerequisite for other insane rules?
+
+* [SA1210: UsingDirectivesMustBeOrderedAlphabeticallyByNamespace](http://www.stylecop.com/docs/SA1210.html)
+
+  This is quite common, but I find it pretty silly. Let ReSharper organize your using directives.
+
+* [SA1211: UsingAliasDirectivesMustBeOrderedAlphabeticallyByAliasName](http://www.stylecop.com/docs/SA1211.html)
+
+  This is also pretty silly.
 
 
 ## Readability Rules (SA1100-)
