@@ -511,5 +511,236 @@ In general, I don't think it makes sense to spend the developers' time sorting c
 
 ## Readability Rules (SA1100-)
 
+As always, StyleCop is mainly helpful when assisting in maintaining elementary code hygiene and consistency of formatting. As corrective-aggressive monkey (ref SA1122), StyleCop is annoying and outright damaging.
+
+### Sane
+
+* [SA1100: DoNotPrefixCallsWithBaseUnlessLocalImplementationExists](http://www.stylecop.com/docs/SA1100.html)
+
+  I don't know if this is a problem warranting a rule but OK. 
+
+* [SA1102: QueryClauseMustFollowPreviousClause](http://www.stylecop.com/docs/SA1102.html)
+
+  Seems reasonable.
+
+* [SA1103: QueryClausesMustBeOnSeparateLinesOrAllOnOneLine](http://www.stylecop.com/docs/SA1103.html)
+
+  This rule is fine.
+
+* [SA1104: QueryClauseMustBeginOnNewLineWhenPreviousClauseSpansMultipleLines](http://www.stylecop.com/docs/SA1104.html)
+
+  This rule is fine.
+
+* [SA1105: QueryClausesSpanningMultipleLinesMustBeginOnOwnLine](http://www.stylecop.com/docs/SA1105.html)
+
+  This rule is fine.
+
+* [SA1106: CodeMustNotContainEmptyStatements](http://www.stylecop.com/docs/SA1106.html)
+
+  Hygiene.
+
+* [SA1107: CodeMustNotContainMultipleStatementsOnOneLine](http://www.stylecop.com/docs/SA1107.html)
+
+  I think enforcing this rule is always a good idea, even inside lambda expressions.
+
+* [SA1108: BlockStatementsMustNotContainEmbeddedComments](http://www.stylecop.com/docs/SA1108.html)
+
+  I have never seen anyone violate this rule, but it's a horrible practice.
+
+* [SA1109: BlockStatementsMustNotContainEmbeddedRegions](http://www.stylecop.com/docs/SA1109.html)
+
+  I have never seen anyone violate this rule, but it's a horrible practice.
+
+* [SA1110: OpeningParenthesisMustBeOnDeclarationLine](http://www.stylecop.com/docs/SA1110.html)
+
+  This rule is fine.
+
+* [SA1111: ClosingParenthesisMustBeOnLineOfOpeningParenthesis](http://www.stylecop.com/docs/SA1111.html)
+
+  This rule is fine.
+
+* [SA1112: ClosingParenthesisMustBeOnLineOfOpeningParenthesis](http://www.stylecop.com/docs/SA1112.html)
+
+  No controversy here.
+
+* [SA1113: CommaMustBeOnSameLineAsPreviousParameter](http://www.stylecop.com/docs/SA1113.html)
+
+  Hygiene.
+
+* [SA1114: ParameterListMustFollowDeclaration](http://www.stylecop.com/docs/SA1114.html)
+
+  Hygiene.
+
+* [SA1115: ParameterMustFollowComma](http://www.stylecop.com/docs/SA1115.html)
+
+  I think this rule is fine.
+
+* [SA1116: SplitParametersMustStartOnLineAfterDeclaration](http://www.stylecop.com/docs/SA1116.html)
+
+  I think this rule is fine.
+
+* [SA1117: ParametersMustBeOnSameLineOrSeparateLines](http://www.stylecop.com/docs/SA1117.html)
+ 
+  I think this rule is fine.
+
+* [SA1118: ParameterMustNotSpanMultipleLines](http://www.stylecop.com/docs/SA1118.html)
+
+  I think this rule is fine.
+
+* [SA1120: CommentsMustContainText](http://www.stylecop.com/docs/SA1120.html)
+
+  This rule is fine.
+
+* [SA1123: DoNotPlaceRegionsWithinElements](http://www.stylecop.com/docs/SA1123.html)
+
+  Using regions at all is a bad idea, and this is a horrible idea.
+
+* [SA1124: DoNotUseRegions](http://www.stylecop.com/docs/SA1124.html)
+
+  Just don't do it.
+
+* [SA1125: UseShorthandForNullableTypes](http://www.stylecop.com/docs/SA1125.html)
+
+  I can't think of any code samples where it makes sense to write `Nullable<Foo>` instead of `Foo?`.
+
+
+### Insane
+
+* [SA1101: PrefixLocalCallsWithThis](http://www.stylecop.com/docs/SA1101.html)
+
+  No chance.
+
+* [SA1121: UseBuiltInTypeAlias](http://www.stylecop.com/docs/SA1121.html)
+
+  I'm inclined to think that it is better to use the real type names when referring to static methods defined by those types, e.g. `String.Compare("foo", "bar")` is better than `string.Compare("foo", "bar")`. 
+
+* [SA1122: UseStringEmptyForEmptyStrings](http://www.stylecop.com/docs/SA1122.html)
+
+  There is an established best practice in the .NET world that you are supposed to use `string.Empty` rather than `""`, but I think it's ridiculous. IMHO `""` is preferable, since it is both more concise and more readable. There is also some superstition out there that `string.Empty` is supposed to be more _performant_ than `""`, but that's pure hogwash. Since .NET 2.0, there has been no difference in performance between the two alternatives (and besides: talk about micro optimization!). Developers who let this myth dictate how they write code today should google "the monkey and the ladder". For a more thorough discussion, see http://stackoverflow.com/a/263257.
+
+* [SA1126: PrefixCallsCorrectly](http://www.stylecop.com/docs/SA1126.html)
+
+  WTF? No.
+
 
 ## Spacing Rules (SA1000-)
+
+This is primarily about simple code hygiene. This is what StyleCop does best.
+
+### Sane
+
+* [SA1000: KeywordsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1000.html)
+
+  OK. Violations of this rule is just sloppy typing.
+
+* [SA1001: CommasMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1001.html)
+
+  OK. Violations of this rule is just sloppy typing.
+
+* [SA1002: SemicolonsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1002.html)
+
+  OK. Violations of this rule is just sloppy typing.
+
+* [SA1003: SymbolsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1003.html)
+
+  Can't think of any code samples where it is acceptable to violate this rule.
+
+* [SA1004: DocumentationLinesMustBeginWithSingleSpace](http://www.stylecop.com/docs/SA1004.html)
+
+  A bit of pedant rule, but probably makes the code a little tidier without causing problems.
+
+* [SA1005: SingleLineCommentsMustBeginWithSingleSpace](http://www.stylecop.com/docs/SA1005.html)
+
+  Even more of a pedant rule, but the practice of adding the one spacing can probably be interned by muscle memory, and I suppose it makes things a little tidier.
+
+* [SA1006: PreprocessorKeywordsMustNotBePrecededBySpace](http://www.stylecop.com/docs/SA1006.html)
+
+  This is the convention. I rarely see preprocessor keywords in the wild, so the rule rarely applies.
+
+* [SA1007: OperatorKeywordMustBeFollowedBySpace](http://www.stylecop.com/docs/SA1007.html)
+
+  This is neat and clean.
+
+* [SA1008: OpeningParenthesisMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1008.html)
+
+  With some doubts. I'm not sure if there might be code samples where it would be preferable to deviate from this rule.
+
+* [SA1009: ClosingParenthesisMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1009.html)
+
+  Ref SA1008.
+  
+* [SA1010: OpeningSquareBracketsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1010.html)
+
+  Ref SA1008.
+    
+* [SA1011: ClosingSquareBracketsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1011.html)
+
+  Ref SA1008.
+  
+* [SA1012: OpeningCurlyBracketsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1012.html)
+
+  Ref SA1008.
+
+* [SA1013: ClosingCurlyBracketsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1013.html)
+
+  Ref SA1008.
+
+* [SA1014: OpeningGenericBracketsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1014.html)
+
+  I think adhering to this rule is problem-free.
+
+* [SA1015: ClosingGenericBracketsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1015.html)
+
+  Ref SA1014.
+
+* [SA1016: OpeningAttributeBracketsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1016.html)
+
+  I think adhering to this rule is problem-free.
+
+* [SA1017: ClosingAttributeBracketsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1017.html)
+
+  Ref SA1016.
+
+* [SA1018: NullableTypeSymbolsMustNotBePrecededBySpace](http://www.stylecop.com/docs/SA1018.html)
+
+  This is the convention.
+
+* [SA1019: MemberAccessSymbolsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1019.html)
+
+  No controversy here.
+
+* [SA1020: IncrementDecrementSymbolsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1020.html)
+
+  This is the convention.
+
+* [SA1021: NegativeSignsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1021.html)
+
+  I see no controversy here.
+
+* [SA1022: PositiveSignsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1022.html)
+
+  I see no controversy here.
+
+* [SA1023: DereferenceAndAccessOfSymbolsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1023.html)
+
+  I suppose this is the convention. Few practical implications, since the rule rarely applies.
+
+* [SA1024: ColonsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1024.html)
+
+  This is the convention.
+
+* [SA1025: CodeMustNotContainMultipleWhitespaceInARow](http://www.stylecop.com/docs/SA1025.html)
+
+  No controversy here. Violations are due to sloppy typing.
+
+* [SA1027: TabsMustNotBeUsed](http://www.stylecop.com/docs/SA1027.html)
+
+  No controversy here.
+
+
+### Insane
+
+* [SA1026: CodeMustNotContainSpaceAfterNewKeywordInImplicitlyTypedArrayAllocation](http://www.stylecop.com/docs/SA1026.html)
+
+  Calling this rule "insane" is a bit harsh, but I don't think I concur. I prefer a whitespace.
+
