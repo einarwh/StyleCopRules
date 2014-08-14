@@ -653,6 +653,10 @@ See http://www.stylecop.com/docs/Spacing%20Rules.html
 
   OK. Violations of this rule is just sloppy typing.
 
+* [SA1003: SymbolsMustBeSpacedCorrectly](http://www.stylecop.com/docs/SA1003.html)
+
+  Can't think of any code samples where it is acceptable to violate this rule.
+
 * [SA1006: PreprocessorKeywordsMustNotBePrecededBySpace](http://www.stylecop.com/docs/SA1006.html)
 
   This is the convention. I rarely see preprocessor keywords in the wild, so the rule rarely applies.
