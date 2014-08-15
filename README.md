@@ -13,7 +13,7 @@ This project contains my subjective assessment of the available StyleCop rules, 
 
 # Disclaimer
 
-Hopefully this is obvious, but still: I should make it very clear that I am very grateful for the effort put into making StyleCop, which is a useful tool that aids quality-minded .NET developers all over the world every day. While I make some opinionated assessments of some of the rules below, it doesn't mean I think poorly of the good people behind the tool. Quite contrary, I wouldn't be making this assessment if I didn't think StyleCop is an excellent tool worth spending time on - I just want to maximize the benefit I get from it. 
+Hopefully this is obvious, but still: I wish to make it very clear that I am very grateful for the effort put into making StyleCop, which is a useful tool that aids quality-minded .NET developers all over the world every day. While I make some opinionated assessments of some of the rules below, it doesn't mean I think poorly of the good people behind the tool. Quite contrary, I wouldn't be making this assessment if I didn't think StyleCop is an excellent tool worth spending time on - I just want to maximize the benefit I get from it. 
 
 # Assessment of rules
 
