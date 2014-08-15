@@ -603,11 +603,7 @@ See http://www.stylecop.com/docs/Readability%20Rules.html
 
 * [SA1123: DoNotPlaceRegionsWithinElements](http://www.stylecop.com/docs/SA1123.html)
 
-  Using regions at all is a bad idea, and this is a horrible idea.
-
-* [SA1124: DoNotUseRegions](http://www.stylecop.com/docs/SA1124.html)
-
-  Just don't do it.
+  I'm not a fan of regions anywhere (ref SA1124), but this is a particularly bad way of using them.
 
 * [SA1125: UseShorthandForNullableTypes](http://www.stylecop.com/docs/SA1125.html)
 
@@ -627,6 +623,10 @@ See http://www.stylecop.com/docs/Readability%20Rules.html
 * [SA1122: UseStringEmptyForEmptyStrings](http://www.stylecop.com/docs/SA1122.html)
 
   There is an established best practice in the .NET world that you are supposed to use `string.Empty` rather than `""`, but I think it's ridiculous. IMHO `""` is preferable, since it is both more concise and more readable. There is also some superstition out there that `string.Empty` is supposed to be more _performant_ than `""`, but that's pure hogwash. Since .NET 2.0, there has been no difference in performance between the two alternatives (and besides: talk about micro optimization!). Developers who let this myth dictate how they write code today should google "the monkey and the ladder". For a more thorough discussion, see http://stackoverflow.com/a/263257.
+
+* [SA1124: DoNotUseRegions](http://www.stylecop.com/docs/SA1124.html)
+
+  I don't like regions (refactor if things get big and unwieldy!), but there might be cases where regions are OK and the overall principle is to err on the lenient side when in doubt.
 
 * [SA1126: PrefixCallsCorrectly](http://www.stylecop.com/docs/SA1126.html)
 
