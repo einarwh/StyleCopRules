@@ -40,7 +40,7 @@ See http://www.stylecop.com/docs/Documentation%20Rules.html
 
 * [SA1610: PropertyDocumentationMustHaveValueText](http://www.stylecop.com/docs/SA1610.html)
 
-  Empty documentation is always nonsensical.
+  Empty documentation is always nonsensical (but please don't ever resort to documenting the value of the property, ref SA1609 which is utterly insane - in other words, please render this rule superfluous).
   
 * [SA1613: ElementParameterDocumentationMustDeclareParameterName](http://www.stylecop.com/docs/SA1613.html)
 
